@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jiao.luo.activity.AccountSettingActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size_15">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:src="@drawable/nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="账户设置"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:padding="@dimen/size_10"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:src="@drawable/headportrait"
+            android:id="@+id/civ_icon"
+            android:layout_width="@dimen/size_55"
+            android:layout_height="@dimen/size_55" />
+        <TextView
+            android:layout_marginTop="@dimen/size_10"
+            android:text="编辑头像"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <include layout="@layout/pub_line_blob"/>
+    <RelativeLayout
+        android:id="@+id/rl_student"
+        style="@style/LinearLayout_style">
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:text="大学生身份认证" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/icon_r_arrow"
+            android:textColor="@color/grey" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_motify_pwd"
+        style="@style/LinearLayout_style">
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:text="修改密码" />
+
+        <TextView
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/icon_r_arrow"
+            android:textColor="@color/grey" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:padding="@dimen/size_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/btn_exit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45"
+        android:background="@drawable/shape_btn_white_corner"
+        android:text="退出"
+        android:textSize="16sp"
+
+        />
+    </RelativeLayout>
+
+</LinearLayout>

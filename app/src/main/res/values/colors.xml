@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="tab_checked">#3F51B5</color>
+    <color name="tab_unchecked">#757575</color>
+    <color name="bg_gray">#22757575</color>
+    <color name="bg_blue">#01CFFF</color>
+    <color name="grey">#888888</color>
+
+    <color name="menu_head_bg">#99ff4866</color>
+    <color name="cate_checked"> #02CEFF</color>
+
+    <color name="black">#2a2a2a</color>
+    <color name="red">#ff001e</color>
+    <color name="dialog_bg_color">#9d16161b</color>
+    <color name="transLucent">#60000000</color>
+    <color name="title_bg">#4099e9</color>
+    <color name="color_black">#000000</color>
+    <color name="color_white">#ffffff</color>
+    <color name="lineColor">#eaeaea</color>
+    <color name="hint_color">#c3c3c3</color>
+    <color name="transParent">#00000000</color>
+
+
+</resources>

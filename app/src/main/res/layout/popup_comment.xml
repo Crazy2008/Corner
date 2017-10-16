@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transParent"
+    android:clipChildren="true"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size_20"
+            android:background="@color/google_red"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/size_30"
+            >
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="c参差不齐"
+                android:textColor="@color/color_white" />
+
+            <TextView
+                android:id="@+id/tv_desc"
+                android:layout_width="@dimen/size_200"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/size_10"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/size_15"
+                android:padding="@dimen/size_8"
+                android:text="钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛钓鱼岛"
+                android:textColor="@color/color_white" />
+
+            <LinearLayout
+
+                android:id="@+id/ll_support"
+                android:layout_width="@dimen/size_80"
+                android:layout_height="@dimen/size_80"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size_45"
+                android:background="@drawable/shape_circle"
+                android:gravity="center"
+
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_support"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_support_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5"
+                    android:text="32"
+                    android:textColor="@color/color_white" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+       <!-- app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"-->
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/civ_icon"
+            android:layout_width="@dimen/size_45"
+            android:layout_height="@dimen/size_45"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/third_01"
+
+
+            />
+    </FrameLayout>
+
+
+</LinearLayout>

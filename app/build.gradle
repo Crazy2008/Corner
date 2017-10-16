@@ -1,0 +1,106 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.jiao.luo"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "${applicationId}",
+                JPUSH_APPKEY : "59c514f268ac239c34a6ac07", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "角落", //暂时填写默认值即可.
+        ]
+    }
+    signingConfigs {
+        config {
+            keyAlias 'hejia'
+            keyPassword 'adminadmin'
+            storeFile file('../store.jks')
+            storePassword 'adminadmin'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.config
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+    //配置自定义打包名称
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def releaseTime = new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+                def appName = "jiaoluo"
+                if (variant.buildType.name.contains('debug')) {
+                    def fileName = "${appName}_${releaseTime}.apk";/*debug文件名 */
+                    output.outputFile = new File(outputFile.parent, fileName)
+                } else if (variant.buildType.name.contains('release')) {
+                    def fileName = "${appName}_${variant.versionName}_${releaseTime}.apk";
+/*release文件名*/
+                    output.outputFile = new File(outputFile.parent, fileName)
+                }
+
+            }
+        }
+    }
+
+/**
+ * 解决打包出现zh chinese问题
+ */
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+
+    compile project(':magicindicator')
+    compile project(':libcommon')
+    compile "cn.jiguang:jpush:${rootProject.ext.jpush}"
+    compile "com.jakewharton:butterknife:${rootProject.ext.butterKnife}"
+    //高斯模糊
+    //九宫格显示图片
+    //高斯模糊
+    //拍照的dialog弹窗控件
+    //下拉刷新
+
+    /**
+     流式布局*/
+    compile 'com.dou361.dialogui:jjdxm-dialogui:1.0.3'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-vector-drawable:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta3'
+    compile 'org.greenrobot:greendao:3.2.2'
+    compile 'com.flyco.roundview:FlycoRoundView_Lib:1.1.4@aar'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.canyinghao:canrefresh:1.1.1'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'net.qiujuer.genius:blur:2.0.0-beta4'
+    compile 'com.lzy.widget:ninegridview:0.2.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.3'
+    compile 'com.liuzhuang.opensource:rcimageview:0.0.2'
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    testCompile 'junit:junit:4.12'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+}

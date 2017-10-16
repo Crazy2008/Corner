@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jiao.luo.activity.CateActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/rl"
+        android:layout_marginBottom="@dimen/size_3"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_40"
+        android:layout_marginTop="@dimen/size_5"
+        android:padding="@dimen/size_5">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="至少选择两个板块关注"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/rl"
+        android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="@color/bg_gray"/>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/size_40"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:textColor="@color/tab_unchecked"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40"
+            android:gravity="center"
+            android:text="我们将努力推荐您更感兴趣的内容" />
+
+        <android.support.v7.widget.RecyclerView
+
+            android:layout_marginTop="@dimen/size_20"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </android.support.v7.widget.RecyclerView>
+    </LinearLayout>
+
+
+
+    <Button
+        android:layout_alignParentBottom="true"
+        android:id="@+id/btn_yes"
+        android:text="确认"
+        android:background="@color/bmob_black"
+        android:textColor="@color/color_white"
+        android:textSize="16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

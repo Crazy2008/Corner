@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/activity_startpage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/activity_startpage_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/start_bg"/>
+
+
+    <com.flyco.roundview.RoundTextView
+        android:id="@+id/start_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="right|top"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="1"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        app:rv_backgroundColor="@color/colorPrimary"
+        app:rv_cornerRadius="@dimen/dp_10"/>
+
+</RelativeLayout>

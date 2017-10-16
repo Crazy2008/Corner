@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_260">
+        <ImageView
+            android:scaleType="fitXY"
+           android:id="@+id/iv_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:id="@+id/ll_header"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_260"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_header"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_140"
+                android:layout_marginTop="@dimen/size_5"
+                android:padding="@dimen/size_5">
+
+
+
+                <TextView
+                    android:id="@+id/tv_follow_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:background="@color/color_white"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_120"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/size_30">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv_add"
+                    android:layout_width="50dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/size_15"
+                     />
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_10"
+                    android:layout_gravity="bottom"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="@dimen/size_15"
+                    android:background="@color/bg_gray" />
+
+
+            </LinearLayout>
+            
+        </LinearLayout>
+
+
+        <com.android.liuzhuang.rcimageview.RoundCornerImageView
+            app:rciv_radius="2dp"
+            android:id="@+id/iv_icon"
+            android:layout_width="@dimen/size_80"
+            android:layout_height="@dimen/size_80"
+            android:layout_gravity="center" />
+    </FrameLayout>
+    <RelativeLayout
+        android:visibility="gone"
+        android:id="@+id/rl_notice"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45"
+        android:background="@color/bg_gray"
+        >
+
+        <TextView
+            android:layout_marginLeft="@dimen/size_10"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="推送通知" />
+
+        <ToggleButton
+            android:id="@+id/tb_toggle"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:button="@drawable/ios7_btn"
+            android:text=""
+            android:textOff=""
+            android:textOn="" />
+    </RelativeLayout>
+
+</LinearLayout>

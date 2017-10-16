@@ -1,0 +1,1 @@
+1、不要再考虑bmob jar包用gradlew下载了，直接放在libs，其依赖的包无法排除

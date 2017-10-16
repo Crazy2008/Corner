@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/size_90"
+    android:layout_height="wrap_content"
+    android:background="@drawable/down"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/size_15">
+
+    <TextView
+        android:id="@+id/tv_find"
+        style="@style/popupStyle"
+        android:text="发现" />
+
+    <include layout="@layout/popup_line_white" />
+
+    <TextView
+        android:id="@+id/tv_sport"
+        style="@style/popupStyle"
+        android:text="大操场"
+        />
+    <include layout="@layout/popup_line_white" />
+    <TextView
+        android:id="@+id/tv_my"
+        style="@style/popupStyle"
+        android:text="我的" />
+    <include layout="@layout/popup_line_white" />
+</LinearLayout>

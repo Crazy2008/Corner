@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.jiao.luo.activity.SettingSecondActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/size_15">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10"
+            android:src="@drawable/nav_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="系统设置"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <include layout="@layout/pub_line_thin"/>
+
+
+    <com.jiao.luo.widget.CustomerScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/setting_new_version_Re"
+            style="@style/LinearLayout_style">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="移动网络不加载图片视频" />
+
+            <ToggleButton
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/ios7_btn"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            style="@style/LinearLayout_style">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="切换到暗色模式" />
+
+            <ToggleButton
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@android:color/transparent"
+                android:button="@drawable/ios7_btn"
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_clear"
+            style="@style/LinearLayout_style">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="清除缓存" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/icon_r_arrow"
+                android:text="76.5M"
+                android:textColor="@color/grey" />
+        </RelativeLayout>
+
+        <include layout="@layout/gray_no_bg" />
+
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rl_QQqun"
+            style="@style/LinearLayout_style">
+
+            <TextView
+
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="加入到角落全国大学生社群QQ" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/icon_r_arrow"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_user_protocol"
+            style="@style/LinearLayout_style">
+
+            <TextView
+
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="用户协议" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/icon_r_arrow"
+                android:textColor="@color/grey" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_service"
+            style="@style/LinearLayout_style">
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:text="联系客服" />
+
+            <TextView
+                style="@style/text_style"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawableRight="@drawable/icon_r_arrow"
+                android:textColor="@color/grey" />
+        </RelativeLayout>
+    </LinearLayout>
+    </com.jiao.luo.widget.CustomerScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="3dp"
+    android:paddingTop="20dp"
+    tools:context=".fragment.HomeFragment">
+    <RelativeLayout
+        android:layout_marginTop="@dimen/size_10"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+
+        <ImageView
+            android:background="@drawable/selector_btn_menu_click"
+            android:id="@+id/iv_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rb_project_mange"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/nav_menu" />
+
+
+        <RadioGroup
+            android:layout_marginTop="5dp"
+            android:id="@+id/rb_project_mange"
+            android:layout_width="180dp"
+            android:layout_height="26dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/find"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="发现"
+                android:textColor="@drawable/selector_text_checked"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/subscrible"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="订阅"
+                android:textColor="@drawable/selector_text_checked"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <ImageView
+            android:background="@drawable/selector_btn_search_click"
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/rb_project_mange"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/nav_search" />
+
+
+        <!-- TODO: Update blank fragment layout -->
+    </RelativeLayout>
+
+    <View
+
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/size_10"
+        android:background="@color/color_black"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:layout_marginTop="8dp"
+        android:id="@+id/fragment_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>
